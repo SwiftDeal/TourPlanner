@@ -1,0 +1,115 @@
+    <div class="content">
+        <div class="main-content">
+            
+
+    <div class="panel panel-default">
+        <a class="panel-heading">Search Records</a>
+        <div id="page-stats" class="panel-collapse panel-body collapse in">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#flights" data-toggle="tab">Flights Searches</a></li>
+              <li><a href="#hotels" data-toggle="tab">Hotel Searches</a></li>
+              <li><a href="#cars" data-toggle="tab">Cars Searches</a></li>
+              <li><a href="#vacations" data-toggle="tab">Vacations Searches</a></li>
+            </ul>
+            <div class="row">
+                <div id="myTabContent" class="tab-content">
+                      <div class="tab-pane active in" id="flights">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>From </th>
+                                  <th>To</th>
+                                  <th>Date</th>
+                                  <th>People</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            {foreach $flight in $flights}
+                                <tr>
+                                  <td>{echo $flight->input1}</td>
+                                  <td>{echo $flight->input2}</td>
+                                  <td>{echo $flight->input3}</td>
+                                  <td>{echo $flight->input4}</td>
+                                </tr>
+                             {/foreach}
+
+
+                              </tbody>
+                            </table>
+                      </div>
+                      <div class="tab-pane " id="hotels">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Where</th>
+                                  <th>Check in</th>
+                                  <th>Check Out</th>
+                                  <th>Guests</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            {foreach $hotel in $hotels}
+                                <tr>
+                                  <td>{echo $hotel->input1}</td>
+                                  <td>{echo $hotel->input2}</td>
+                                  <td>{echo $hotel->input3}</td>
+                                  <td>{echo $hotel->input4}</td>
+                                </tr>
+                             {/foreach}
+
+                              </tbody>
+                            </table>
+                      </div>
+                      <div class="tab-pane" id="cars">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>City</th>
+                                  <th>Pick Up</th>
+                                  <th>Drop Off</th>
+                                  <th>Car Type</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            {foreach $car in $cars}
+                                <tr>
+                                  <td>{echo $car->input1}</td>
+                                  <td>{echo $car->input2}</td>
+                                  <td>{echo $car->input3}</td>
+                                  <td>{echo $car->input4}</td>
+                                </tr>
+                             {/foreach}
+
+
+                              </tbody>
+                            </table>
+                      </div>
+                      <div class="tab-pane" id="vacations">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Where</th>
+                                  <th>When</th>
+                                  <th>Return</th>
+                                  <th>Peoples</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            {foreach $vacation in $vacations}
+                                <tr>
+                                  <td>{echo $vacation->input1}</td>
+                                  <td>{echo $vacation->input2}</td>
+                                  <td>{echo $vacation->input3}</td>
+                                  <td>{echo $vacation->input4}</td>
+                                </tr>
+                             {/foreach}
+
+
+                              </tbody>
+                            </table>
+                      </div>
+                </div>
+            </div>
+
+</div>
+    </div>

@@ -1,0 +1,77 @@
+<div class="content">
+<div class="header">
+            
+            <h1 class="page-title">Package Creator</h1>
+                    <ul class="breadcrumb">
+            <li><a href="/admin/">Home</a> </li>
+            <li class="active">Create Package</li>
+        </ul>
+
+        </div>
+           <div class="main-content">
+            <div class="padding-left padding-right">
+            <div>
+            
+             <div class="row">
+        {if(isset($msg))}
+        <div class="alert alert-info alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            {echo $msg}
+        </div>
+        {/if}
+
+        <div class="col-md-offset-2 col-lg-8">
+            <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Title</label>
+                                <input type="text" class="form-control" name="title" required="" name="title" placeholder="max 15 Chars">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Price</label>
+                                 <input type="text" class="form-control"  required="" name="price" placeholder="Amount in INR">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                            <label>Locations </label>
+                            <input type="text" class="form-control" name="location" required="" placeholder="Locations icluded, seprate by comma">   
+                            </div>                   
+                    </div>                  
+                </div>
+                 <div class="form-group">
+                        <div class="row">
+                        <div class="col-md-6">
+                           <label>Duration</label>
+                            <input type="text" class="form-control" name="duration" required="" name="duration" placeholder="9 days 10 Nights">
+                        </div>
+                        <div class="col-md-6">
+                           <label>Season</label>
+                            <input type="text" class="form-control" required="" name="season" placeholder="Best month to visit">
+                        </div>
+                    </div>                  
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Special Attraction</label>
+                    <input type="text" name="attraction" class="form-control editor" rows="7" placeholder="Use comma to seprate special attractions">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea name="description" id="editor" class="form-control editor" rows="7" placeholder=" Description about Package"></textarea>
+                </div>
+                
+                <input type="hidden" name="action" value="newpackage">
+                <button type="submit" class="btn btn-success pull-right">Save <i class="fa fa-check-circle fa-fw"></i></button>
+            </form>
+        </div>
+    </div><br>
+
+            </div>
+        </div>
+    </div>
+</div>

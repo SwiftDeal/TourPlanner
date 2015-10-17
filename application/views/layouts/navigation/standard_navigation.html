@@ -1,0 +1,103 @@
+            <!-- Header-->
+            <header id="header" class="header-v2">
+                <!-- Main Nav -->
+                <nav class="flat-mega-menu">            
+                    <!-- flat-mega-menu class -->
+                    <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
+                    <input id="mobile-button" type="checkbox">                          
+
+                    <ul class="collapse"><!-- collapse class for collapse the drop down -->
+                        <!-- website title - Logo class -->
+                        <li class="title">
+                            <a href="/home"><span>Tour</span>Planners<span>.</span></a> 
+                        </li>
+                        <!-- End website title - Logo class -->
+
+                        <li><a href="/home">HOME</a></li>
+                        <li> <a href="/about">ABOUT US</a>
+                        </li>
+
+                        <li> <a href="/services">SERVICES</a></li>
+
+                        <li> <a href="/gallery">GALLERY</a></li>
+
+                        <li> <a href="#">PACKAGES</a> 
+                            <div class="drop-down full-width hover-fade"><!-- full width drop down with 4 columns + images -->
+                            {foreach $nav in $navs}
+                                <ul><!-- column one -->
+                                    <li>
+                                        <h2><span>{echo $nav->title}</span></h2>
+                                        <a href="/package?id="><img src="{echo CDN }img/gallery-2/1.jpg" alt="image 1"> </a> 
+                                        <p class="price"><span>&#8377;</span>{echo $nav->price}</p>
+                                        <a href="/package?id=" class="btn btn-primary">View Details</a>
+                                    </li>
+                                </ul>
+                                {/foreach}
+                            </div>
+                        </li>
+                        <li> <a href="/blog">BLOGS</a></li>
+                        <li>
+                            <a href="/contact">CONTACT</a>
+                        </li>
+
+                        <li class="social-bar"> <a href="#">FOLLOW US</a> 
+                            <ul class="drop-down hover-zoom">
+                                <li> <a href="#" target="_blank"><i class="fa fa-flickr"></i> </a> </li>
+                                <li> <a href="#" target="_blank"><i class="fa fa-instagram"></i> </a> </li>
+                                <li> <a href="#" target="_blank"><i class="fa fa-youtube"></i> </a> </li>
+                                <li> <a href="#" target="_blank"><i class="fa fa-facebook"></i> </a> </li>
+                                <li> <a href="#" target="_blank"><i class="fa fa-google-plus"></i> </a> </li>
+                                <li> <a href="#" target="_blank"><i class="fa fa-pinterest"></i> </a> </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="login-form"> <i class="fa fa-user"></i><!-- login form -->
+                            <ul class="drop-down hover-expand">
+                                <li>
+                                    <form method="post" action="/home">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="email" required="required" name="email" placeholder="Your email address"> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"> 
+                                                    <input type="password" required="required" name="password" placeholder="Password"> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input type="submit" value="Login"> </td>
+                                                <input type="hidden" name="action" value="userlogin">
+                                                <td> <label> <input type="checkbox" name="check_box"> Keep me signed in </label> </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                    <table>
+                                        <tr>
+                                            <td><a href="/usersignup"><input type="button" value="Create Account"></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </li>  
+
+                        <li class="search-bar"> <i class="fa fa-search"></i><!-- search bar -->
+                            <ul class="drop-down hover-expand">
+                                <li>
+                                    <form method="post" action="#">
+                                        <table>
+                                            <tr>
+                                                <td> <input type="search" required="required" name="serach_bar" placeholder="Type Keyword Here"> </td>
+                                                <td> <input type="submit" value="Search"> </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>           
+                    </ul>
+                </nav>
+                <!-- Main Nav -->
+            </header>
+            <!-- End Header-->

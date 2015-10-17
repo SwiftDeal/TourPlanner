@@ -1,0 +1,49 @@
+
+    <div class="content">
+        <div class="header">
+            
+            <h1 class="page-title">News Letter Subscribers</h1>
+                    <ul class="breadcrumb">
+            <li><a href="/admin/">Home</a> </li>
+            <li class="active">Subscribers</li>
+        </ul>
+
+        </div>
+        <div class="main-content">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email ID</th>
+      <th>Subscribed On</th>
+    </tr>
+  </thead>
+  <tbody>
+{foreach $singleuser in $subscribers}
+    <tr>
+      <td>{echo $singleuser->name}</td>
+      <td>{echo $singleuser->email}</td>
+      <td>{echo $singleuser->created}</td>
+    </tr>
+  {/foreach}
+
+  </tbody>
+</table>
+{if count($contactus)>10}
+{script $pagination = (count($contactus)/10)+1}
+{var_dump($pagination)}
+<center>
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+</center>
+{/if}
+
+</div>
+</div>

@@ -1,0 +1,246 @@
+            <!-- Section Title-->    
+            <div class="section-title-02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1>{echo $package->title}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="crumbs">
+                                <ul>
+                                    <li><a href="/home">Home</a></li>
+                                    <li>/</li>
+                                    <li>Packages</li>                                       
+                                </ul>    
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>   
+
+            <!--Content Central -->
+            <div class="content-central">
+                <!-- Shadow Semiboxed -->
+                <div class="semiboxshadow text-center">
+                    <img src="{echo CDN}img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+                <!-- End Shadow Semiboxed -->
+
+                <!-- End content info - Grey Section-->
+                <div class="content_info">
+                    <!-- Info Resalt-->
+                    <div class="content_resalt paddings-mini tabs-detailed">
+                        <div class="container wow fadeInUp">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Nav Tabs-->
+                                    <ul class="nav nav-tabs" id="myTab">
+                                       <li class="active">
+                                            <a href="#hotel" data-toggle="tab"><i class="fa fa-home"></i> DESCRIPTION</a>
+                                        </li>
+                                        <li>
+                                            <a href="#preferences" data-toggle="tab"><i class="fa fa-camera"></i> Preferences</a>
+                                        </li>
+                                       <li>
+                                            <a href="#faq" data-toggle="tab"><i class="fa fa-check"></i>FAQ QUESTIONS</a>
+                                        </li>
+                                    </ul>
+                                    <span class="pull-right"><h1 class="price"><span>&#8377;</span>{echo $package->price}</h1></span>
+                                    <!-- End Nav Tabs-->
+
+                                    <div class="tab-content">
+                                        <!-- Tab One - Hotel -->
+                                        <div class="tab-pane active" id="hotel">                                        
+                                            <h2>{echo $package->title}</h2>
+                                            <p>{echo $package->description}</p>
+
+                                            <h3>Special Attractions</h3>
+                                            {script $attraction = explode(",",$package->attraction)}
+                                            {script $tattract = count($attraction)}
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <ul class="list-styles">
+                                                        {foreach $attract in $attraction}
+                                                        <li><i class="fa fa-check"></i>{echo $attract}</li>
+                                                        {/foreach}
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- end Tab One - Hotel -->
+
+                                        <!-- Tab Two - Preferences -->
+                                        <div class="tab-pane" id="preferences">
+                                            <p>The Aqua Hotel Onabrava is located in Santa Susanna, in the beautiful Costa Brava, a few steps from the beach.The 350 rooms are equipped with air conditioning and heating, telephone, private bathroom with hairdryer and minibar. They also have flat-screen TVs and balconies.</p>
+
+                                            <h3>Hotel facilities </h3>
+
+                                            <ul class="services-lines full-services">
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-bicycle"></i>
+                                                        <h5>Special Activities</h5>
+                                                    </div>
+                                                </li>
+                                                 <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-plane"></i>
+                                                        <h5>Travel Arrangements</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-user"></i>
+                                                        <h5>Private Guide</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-search-plus"></i>
+                                                        <h5>Location Manager</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-map-marker"></i>
+                                                        <h5>Handpicked Hotels</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-money"></i>
+                                                        <h5>Best Price Guarantee</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-bank"></i>
+                                                        <h5>Trust &amp; Safety</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-line-chart"></i>
+                                                        <h5>Best Travel Agent</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-bed"></i>
+                                                        <h5>Great Beds</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-automobile"></i>
+                                                        <h5>Automobile</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-fax"></i>
+                                                        <h5>Fax Service</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-soccer-ball-o"></i>
+                                                        <h5> Sports</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-taxi"></i>
+                                                        <h5>taxi Service</h5>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-service-line">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <h5>Credit Card</h5>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <h3>Rom facilities </h3>
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <ul class="list-styles">
+                                                        <li><i class="fa fa-check"></i> Climate control</li>
+                                                        <li><i class="fa fa-check"></i> Air conditioning</li>
+                                                        <li><i class="fa fa-check"></i> Direct-dial phone</li>
+                                                        <li><i class="fa fa-check"></i> Minibar</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="list-styles">
+                                                        <li><i class="fa fa-check"></i> Wake-up calls</li>
+                                                        <li><i class="fa fa-check"></i> Daily housekeeping</li>
+                                                        <li><i class="fa fa-check"></i> Private bathroom</li>
+                                                        <li><i class="fa fa-check"></i> Hair dryer</li> 
+                                                    </ul>                                   
+                                                </div>  
+                                                <div class="col-md-4">
+                                                    <ul class="list-styles">                              
+                                                        <li><i class="fa fa-check"></i> Makeup/shaving mirror</li>
+                                                        <li><i class="fa fa-check"></i> Shower/tub combination</li>
+                                                        <li><i class="fa fa-check"></i> Satellite TV service</li>
+                                                        <li><i class="fa fa-check"></i> Electronic/magnetic keys</li>   
+                                                    </ul>                                   
+                                                </div>                                  
+                                            </div>
+                                        </div>
+                                        <!-- end Tab Two - Preferences -->
+
+                                        <!-- Tab Theree - faq -->
+                                        <div class="tab-pane" id="faq">
+                                            <div class="accrodation">
+                                                <!-- section 1 -->
+                                                <span class="acc-trigger"><a href="#">Mision</a></span>
+                                                <div class="acc-container">
+                                                    <div class="content">
+                                                        Book cheap hotels and make payment facilities, free cancellation when the hotel so provides, compare prices and find all the options for your vacation.
+                                                    </div>
+                                                </div>
+                                              
+                                                <!-- section 2 -->
+                                                <span class="acc-trigger"><a href="#">Vision</a></span>
+                                                <div class="acc-container">
+                                                    <div class="content">
+                                                        You can choose your favorite destination and start planning your long-awaited vacation. We offer thousands of destinations and have a wide variety of hotels so that you can host and enjoy your stay without problems. Book now your trip travelia.com.
+                                                    </div>
+                                                </div>
+                                           
+                                                <!-- section 3 -->
+                                                <span class="acc-trigger"><a href="#">What we offer?</a></span>
+                                                <div class="acc-container">
+                                                    <div class="content">
+                                                        Find a wide variety of airline tickets and cheap flights, hotels, tour packages, car rentals, cruises and more in travelia.com.You can choose your favorite destination and start planning your long-awaited vacation.
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- section 4 -->
+                                                <span class="acc-trigger active"><a href="#">Our services</a></span>
+                                                <div class="acc-container">
+                                                    <div class="content">
+                                                        You can also check availability of flights and hotels quickly and easily, in order to find the option that best suits your needs.Book cheap hotels and make payment facilities, free cancellation when the hotel so provides, compare prices and find all the options for your vacation.
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- End accrodation -->
+                                        </div>
+                                        <!-- Tend ab Theree - faq -->
+                                    </div>  
+                                </div>
+                                                            <!-- Form Detailed -->                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Info Resalt-->
+                </div>   
+                <!-- End content info - Grey Section--> 
+            </div>
+            <!-- End Content Central -->

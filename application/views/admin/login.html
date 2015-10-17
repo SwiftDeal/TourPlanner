@@ -1,0 +1,30 @@
+
+        <div class="dialog">
+         {if isset($msg)}
+        <div class="alert alert-info alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            {echo $msg}
+        </div>
+        {/if}
+    <div class="panel panel-default">
+        <p class="panel-heading no-collapse">Sign In <span class="pull-right"><a href="/admin/register">Crete Account</a></span></p>
+        <div class="panel-body">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="email" class="form-control span12" name="adminemail">
+                </div>
+                <div class="form-group">
+                <label>Password</label>
+                    <input type="password" class="form-controlspan12 form-control" name="adminpassword">
+                </div>
+                <input type="hidden" name="admin" value="login">
+                <input type="submit" class="btn btn-primary pull-right" value="Sign In">
+                <label class="remember-me"><input type="checkbox"> Remember me</label>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+    <p class="pull-right" style=""><a href="https://www.cloudstuffs.com" target="blank" style="font-size: .75em; margin-top: .25em;">Developed by Cloudstuffs</a></p>
+    <p><a href="#">Forgot your password?</a></p>
+</div>

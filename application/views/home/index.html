@@ -1,0 +1,270 @@
+<!-- Slide And Filter Section-->    
+            <div class="tp-banner-container">
+                <!-- SLIDE  -->
+                <div class="tp-banner" >
+                    <!-- SLIDES CONTENT-->
+                    <ul style="padding-left:0px"> 
+                        <!-- SLIDE  -->
+                        <li>
+                            <!-- MAIN IMAGE -->
+                            <img src="{echo CDN}img/slide/3.jpg"  alt="fullslide1">
+                            <!-- LAYERS -->
+                        </li>
+
+                    </ul> 
+                    <!-- END SLIDES  --> 
+                    <div class="tp-bannertimer"></div>  
+                </div>
+                 <!-- SLIDE CONTENT-->
+
+                <!-- FILTER HEADER - TITLE HEADER-->
+                <div class="filter-title top-40">
+                    <!-- Nav Tabs-->
+                    <ul class="nav nav-tabs" id="myTab">
+                       <li>
+                            <a href="#hotel" data-toggle="tab"><i class="fa fa-home"></i> HOTEL</a>
+                        </li>
+                       <li class="active">
+                            <a href="#flights" data-toggle="tab"><i class="fa fa-plane"></i>FLIGHTS</a>
+                        </li>
+                       <li>
+                            <a href="#car" data-toggle="tab"><i class="fa fa-car"></i> CAR</a>
+                        </li>
+                       <li>
+                            <a href="#vacations" data-toggle="tab"><i class="fa fa-camera"></i> Vacations</a>
+                        </li>
+                    </ul>
+                    <!-- End Nav Tabs-->
+
+                    <div class="tab-content">
+                        <!-- Tab One - Hotel -->
+                        <div class="tab-pane" id="hotel">
+                            <!-- FILTER HEADER-->
+                            <div class="filter-header">
+                                <form action="/search" method="get">
+                                    <input type="text" id="hotellocation"  name="location" required="required" placeholder="Where do you want to go?" class="input-large">
+                                    <input type="text" required="required" name="checkin" placeholder="Check In" class="date-input">
+                                    <input type="text" required="required" name="checkout" placeholder="Check Out" class="date-input">
+                                    <div class="selector">
+                                        <select class="guests-input" name="guest">
+                                            <option value="1">1 Guests</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5+ Guests</option>
+                                        </select>
+                                        <span class="custom-select">Guests</span>
+                                    </div>
+                                    <input type="submit" value="Search">
+                                    <input type="hidden" name="search_type" value="hotels">
+                                </form>
+                            </div>
+                            <!-- END FILTER HEADER-->
+                        </div>
+                        <!-- end Tab One - Hotel -->
+
+                        <!-- Tab Two - flights -->
+                        <div class="tab-pane active" id="flights">
+                            <!-- FILTER HEADER-->
+                            <div class="filter-header flights-filter">
+                                <form action="/search" method="get">
+                                    <input type="text" id="airloc1" name="from" required="required" placeholder="Leaving From... Type at least 3 letters of city" class="input-large">
+                                    <input type="text"id="airloc2"  name="to"  required="required" placeholder="Going To... Type at least 3 letters of city" class="input-large">
+                                    <input type="text" name="date" required="required" placeholder="Departing On" class="date-input">
+                                    <input type="text" required="required" placeholder="Arriving On" class="date-input">
+                                    <div class="selector">
+                                        <select class="guests-input" name="people">
+                                            <option value="1">01 Adults</option>
+                                            <option value="2">02 Adults</option>
+                                            <option value="3">03 Adults</option>
+                                            <option value="4">04 Adults</option>
+                                        </select>
+                                        <span class="custom-select">Adults</span>
+                                    </div>
+                                    <div class="selector">
+                                        <select class="guests-input">
+                                            <option value="1">01 Kids</option>
+                                            <option value="2">02 Kids</option>
+                                            <option value="3">03 Kids</option>
+                                            <option value="4">04 Kids</option>
+                                        </select>
+                                        <span class="custom-select">Kids</span>
+                                    </div>
+                                    <input type="hidden" name="search_type" value="flights">
+                                    <input type="submit" value="Search">
+                                </form>
+                            </div>
+                            <!-- END FILTER HEADER--> 
+                        </div>
+                        <!-- Tend ab Two - flights -->
+
+                        <!-- Tab Theree - Car -->
+                        <div class="tab-pane" id="car">
+                            <!-- FILTER HEADER-->
+                            <div class="filter-header car-filter">
+                                <form action="#">
+                                    <input type="text" id="carlocation" required="required" placeholder="City you need  the car?" class="input-large">
+                                    <input type="text" required="required" placeholder="Pick-up date" class="date-input">
+                                    <input type="text" required="required" placeholder="Drop-off date" class="date-input">
+                                    <div class="selector">
+                                        <select class="guests-input">
+                                            <option value="Economy">Economy</option>
+                                            <option value="Compact">Compact</option>
+                                            <option value="Compact">Van</option>
+                                        </select>
+                                        <span class="custom-select">Car Type</span>
+                                    </div>
+                                    <input type="submit" value="Search">
+                                </form>
+                            </div>
+                            <!-- END FILTER HEADER-->
+                        </div>
+                        <!-- end Tab Theree - Car -->
+
+                        <!-- Tab Four - vacations -->
+                        <div class="tab-pane" id="vacations">
+                            <!-- FILTER HEADER-->
+                            <div class="filter-header">
+                                <form action="#">
+                                    <input type="text" required="required" id="vaclocation" placeholder="Where do you want to go?" class="input-large">
+                                    <input type="text" required="required" placeholder="Check In" class="date-input">
+                                    <input type="text" required="required" placeholder="Check Out" class="date-input">
+                                    <div class="selector">
+                                        <select class="guests-input">
+                                            <option value="1">1 Guests</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5+ Guests</option>
+                                        </select>
+                                        <span class="custom-select">Guests</span>
+                                    </div>
+                                    <input type="submit" value="Search">
+                                </form>
+                            </div>
+                            <!-- END FILTER HEADER-->
+                        </div>
+                        <!-- end Tab Four - vacations -->
+                    </div>
+                </div>
+                <!-- END FILTERHEADER - TITLE HEADER -->
+            </div>       
+            <!-- End Slide And Filter Section-->
+
+             <!--Content Central -->
+            <section class="content-central">
+                <!-- Shadow Semiboxed -->
+                <div class="semiboxshadow text-center">
+                    <img src="{echo CDN}img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+                <!-- End Shadow Semiboxed -->
+
+                <!-- End content info - Vacations Destinatios-->
+                <div class="content_info">
+                    <!-- content-boxes-->
+                    <div class="content-boxes">
+                    {foreach $nav in $package}
+                    <!-- Apply for each and put the total as even so  layout maintains -->
+                        <!-- Item-boxe-->
+                        <div class="item-boxed">
+                            <div class="image-boxed">
+                                <span class="overlay"></span>
+                                <img src="{echo CDN}img/gallery-1/1.jpg" alt="">
+                                <a href="/package?id={echo $nav->id}" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
+                            </div>
+                            <div class="info-boxed boxed-top">
+                                <h3>
+                                    {echo $nav->title}<br>
+                                    <span>{echo $nav->location}</span>
+                                </h3>
+                                <hr class="separator">
+                                <p>{echo $nav->attraction}</p>
+                                <ul class="starts">
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                </ul>
+                                <div class="content-btn"><a href="/package?id={echo $nav->id}" class="btn btn-primary">View Details</a></div>
+                                <div class="price"><span>&#8377;</span>{echo $nav->price}</div>
+                            </div>
+                        </div>
+                        <!-- End Item-boxe-->
+                        {/foreach}
+                        <br/>
+                    </div>
+                    <!-- End content-boxes-->
+                </div>   
+                <!-- End content info - Vacations Destinatios--> 
+ <!-- content info - testimonials-->
+                <div class="content_info">
+                    <!-- Parallax Background -->
+                    <div class="bg_parallax image_02_parallax"></div>
+                    <!-- Parallax Background -->
+
+                    <div class="opacy_bg_02">
+                        <!-- Testimonial Propertie-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="info-testimonial">
+                                       <ul id="testimonials">
+                                            <li>
+                                                <p><i class="fa fa-quote-left"></i>The hotel is stunning, super recommended. And the treatment of its people in very good, are always attentive to the little things.<i class="fa fa-quote-right"></i></p>
+
+                                                <div class="image-testimonials">
+                                                    <img src="{echo CDN}img/testimonials/1.jpg" alt="">                        
+                                                </div>   
+                                                <h4>Jeniffer Martinez</h4>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </li>
+
+                                            <li>
+                                                <p><i class="fa fa-quote-left"></i>Spectacular, excellent personal, restaurants and very good drinks, highly recommended.<i class="fa fa-quote-right"></i></p>
+
+                                                <div class="image-testimonials">
+                                                    <img src="{echo CDN}img/testimonials/2.jpg" alt="">                        
+                                                </div>   
+                                                <h4>Juan Rendon</h4>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </li>
+
+                                            <li>
+                                                <p><i class="fa fa-quote-left"></i>The hotel is stunning, super recommended. And the treatment of its people in very good, are always attentive to the little things.<i class="fa fa-quote-right"></i></p>
+
+                                                <div class="image-testimonials">
+                                                    <img src="{echo CDN}img/testimonials/3.jpg" alt="">                        
+                                                </div>   
+                                                <h4>Federick Gordon</h4>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </li>
+                                       </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="testimonial-info">
+                                        <h2>TESTIMONIALS</h2>
+                                        <P>You can choose your favorite destination and start planning your long-awaited vacation. We offer thousands of destinations and have a wide variety of hotels so that you can host and enjoy your stay without problems. Book now your trip travelia.com.</P>
+                                        <a href="#" class="btn btn-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Testimonial Propertie-->
+                    </div>
+                </div>
+        </section>
